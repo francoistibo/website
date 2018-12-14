@@ -1,0 +1,29 @@
+{
+  "name": "francois-thibaud-website",
+  "version": "1.0.0",
+  "repository": "ssh://git@github.com:francoistibo/website.git",
+  "author": "François THIBAUD <francois.thibaud@gmail.com>",
+  "dependencies": {
+    "gsap": "^2.0.2",
+    "vanilla-tilt": "^1.5.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.26.0",
+    "dotenv-parse-variables": "^0.2.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-clean-css": "^3.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-load-plugins": "^1.5.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-svg-sprites": "^4.1.2",
+    "gulp-svgmin": "^2.1.0",
+    "gulp-uglyfly": "^1.4.2",
+    "run-sequence": "^2.2.1",
+    "stylelint": "^7.10.1",
+    "stylelint-config-standard": "^18.2.0"
+  }
+}

@@ -1,0 +1,108 @@
+h1 {
+  font-size: 1.8rem;
+  font-weight: 900;
+  line-height: 1.3;
+  margin: 1rem;
+  font-family: "Merriweather", Georgia, "Times New Roman", Times, serif;
+}
+
+h2,
+.h2-like {
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1.3;
+  margin: 1rem;
+}
+
+h2 {
+  font-weight: 600;
+
+  span {
+    display: block;
+  }
+}
+
+h3 {
+  text-transform: uppercase;
+  font-size: .7rem;
+  font-weight: 300;
+  margin: 2rem 1rem 1rem;
+}
+
+blockquote {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 1rem;
+
+  span {
+    display: block;
+
+    &.dash {
+      display: none;
+    }
+  }
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  border-bottom: 1px solid #000;
+}
+
+// DEVICE : PHABLET
+
+@media screen and (min-width: $phablet) {
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  h2,
+  .h2-like {
+    font-size: 1.7rem;
+  }
+
+  blockquote {
+    font-size: 1.7rem;
+  }
+}
+
+// DEVICE : LAPTOP
+
+@media screen and (min-width: $laptop) {
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    font-weight: 900;
+  }
+
+  h2,
+  .h2-like {
+    font-size: 2rem;
+  }
+
+  blockquote {
+    position: relative;
+  }
+
+  blockquote span {
+    font-size: 2rem;
+    display: block;
+    padding-left: 2.2rem;
+  }
+
+  blockquote span.dash {
+    position: absolute;
+    left: -2.2rem;
+    top: 0;
+    display: inline-block;
+  }
+}
+
+// DEVICE : DESKTOP
+
+@media screen and (min-width: $desktop) {
+  h1 {
+    font-size: 3.5rem;
+  }
+}
