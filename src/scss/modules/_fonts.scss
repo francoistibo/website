@@ -7,8 +7,8 @@
   src:
     local("Roboto Condensed Light"),
     local("RobotoCondensed-Light"),
-    url("../assets/fonts/roboto-condensed-v16-latin-300.woff2") format("woff2"),
-    url("../assets/fonts/roboto-condensed-v16-latin-300.woff") format("woff");
+    url("../dist/assets/fonts/roboto-condensed-v16-latin-300.woff2") format("woff2"),
+    url("../dist/assets/fonts/roboto-condensed-v16-latin-300.woff") format("woff");
 }
 
 // roboto-condensed-regular - latin
@@ -20,8 +20,8 @@
   src:
     local("Roboto Condensed"),
     local("RobotoCondensed-Regular"),
-    url("../assets/fonts/roboto-condensed-v16-latin-regular.woff2") format("woff2"),
-    url("../assets/fonts/roboto-condensed-v16-latin-regular.woff") format("woff");
+    url("../dist/assets/fonts/roboto-condensed-v16-latin-regular.woff2") format("woff2"),
+    url("../dist/assets/fonts/roboto-condensed-v16-latin-regular.woff") format("woff");
 }
 
 /* roboto-condensed-700 - latin */
@@ -33,8 +33,8 @@
   src:
     local("Roboto Condensed Bold"),
     local("RobotoCondensed-Bold"),
-    url("../assets/fonts/roboto-condensed-v16-latin-700.woff2") format("woff2"),
-    url("../assets/fonts/roboto-condensed-v16-latin-700.woff") format("woff");
+    url("../dist/assets/fonts/roboto-condensed-v16-latin-700.woff2") format("woff2"),
+    url("../dist/assets/fonts/roboto-condensed-v16-latin-700.woff") format("woff");
 }
 
 // merriweather-regular - latin
@@ -46,8 +46,8 @@
   src:
     local("Merriweather Regular"),
     local("Merriweather-Regular"),
-    url("../assets/fonts/merriweather-v19-latin-regular.woff2") format("woff2"),
-    url("../assets/fonts/merriweather-v19-latin-regular.woff") format("woff");
+    url("../dist/assets/fonts/merriweather-v19-latin-regular.woff2") format("woff2"),
+    url("../dist/assets/fonts/merriweather-v19-latin-regular.woff") format("woff");
 }
 
 // merriweather-700 - latin
@@ -59,8 +59,8 @@
   src:
     local("Merriweather Bold"),
     local("Merriweather-Bold"),
-    url("../assets/fonts/merriweather-v19-latin-700.woff2") format("woff2"),
-    url("../assets/fonts/merriweather-v19-latin-700.woff") format("woff");
+    url("../dist/assets/fonts/merriweather-v19-latin-700.woff2") format("woff2"),
+    url("../dist/assets/fonts/merriweather-v19-latin-700.woff") format("woff");
 }
 
 // merriweather-900 - latin
@@ -72,6 +72,6 @@
   src:
     local("Merriweather Black"),
     local("Merriweather-Black"),
-    url("../assets/fonts/merriweather-v19-latin-900.woff2") format("woff2"),
-    url("../assets/fonts/merriweather-v19-latin-900.woff") format("woff");
+    url("../dist/assets/fonts/merriweather-v19-latin-900.woff2") format("woff2"),
+    url("../dist/assets/fonts/merriweather-v19-latin-900.woff") format("woff");
 }

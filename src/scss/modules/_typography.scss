@@ -11,7 +11,7 @@ h2,
   font-size: 1.4rem;
   font-weight: 300;
   line-height: 1.3;
-  margin: 1rem;
+  margin: 1rem 1rem 1.6rem 1rem;
 }
 
 h2 {
@@ -26,7 +26,7 @@ h3 {
   text-transform: uppercase;
   font-size: .7rem;
   font-weight: 300;
-  margin: 2rem 1rem 1rem;
+  margin: 1.6rem 1rem 1rem;
 }
 
 blockquote {
@@ -48,6 +48,76 @@ a {
   color: #000;
   text-decoration: none;
   border-bottom: 1px solid #000;
+  transition: all .2s $easingEffectSwift;
+}
+
+ul.social {
+  padding: .5rem 1rem;
+  margin: 0 -1rem;
+
+  li {
+    list-style-type: none;
+    margin: 0 1rem;
+    height: 65px;
+    display: inline-block;
+
+    a {
+      position: relative;
+      display: block;
+      width: 100%;
+      text-decoration: none;
+      border-bottom: 0;
+
+      .icon {
+        width: 30px;
+        height: 30px;
+      }
+
+      span {
+        position: absolute;
+        left: 50%;
+        bottom: -25px;
+        display: inline-block;
+        font-size: .7rem;
+        text-transform: uppercase;
+        transform: translate3d(-50%, 0, 0);
+      }
+
+      &:hover {
+        .icon {
+          transform: translate3d(0, -5px, 0);
+
+          &.icon-twitter {
+            stroke: #00acee;
+          }
+
+          &.icon-linkedin {
+            stroke: #0077b5;
+          }
+
+          &.icon-github {
+            stroke: #0366d6;
+          }
+
+          &.icon-codepen {
+            stroke: #ffdd40;
+          }
+
+          &.icon-dropmark {
+            stroke: #38dedf;
+          }
+
+          &.icon-resume {
+            stroke: #d60352;
+          }
+
+          &.icon-contact {
+            stroke: $color-primary;
+          }
+        }
+      }
+    }
+  }
 }
 
 // DEVICE : PHABLET
@@ -65,28 +135,27 @@ a {
   blockquote {
     font-size: 1.7rem;
   }
+
+  ul.social {
+    li {
+      a {
+        .icon {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    }
+  }
 }
 
 // DEVICE : LAPTOP
 
 @media screen and (min-width: $laptop) {
-  h1 {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-    font-weight: 900;
-  }
-
-  h2,
-  .h2-like {
-    font-size: 2rem;
-  }
-
   blockquote {
     position: relative;
   }
 
   blockquote span {
-    font-size: 2rem;
     display: block;
     padding-left: 2.2rem;
   }
@@ -104,5 +173,11 @@ a {
 @media screen and (min-width: $desktop) {
   h1 {
     font-size: 3.5rem;
+  }
+
+  h2,
+  .h2-like,
+  blockquote span {
+    font-size: 1.8rem;
   }
 }

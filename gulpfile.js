@@ -17,7 +17,11 @@ var webDir = './',
       nodeDir + 'vanilla-tilt/dist/vanilla-tilt.babel.js',
       webDir + 'src/js/app.js'
     ],
-    cssFiles = webDir + 'src/scss/**/*.scss';
+    cssFiles = webDir + 'src/scss/**/*.scss',
+    svgFiles = [
+      webDir + 'src/svg/**/*.svg',
+      '!' + webDir + 'src/svg/__optimize/**/*.svg'
+    ];
 
 // ############## Sass : traitement des fichiers de style
 
@@ -58,9 +62,40 @@ gulp.task('js-watch', ['js'], function (done) {
   done();
 });
 
+// ############## Gestion SVG -> Création de symbols -> Injection dans le HTML
+
+gulp.task('svg-optimize', function() {
+  return gulp.src(svgFiles)
+    .pipe(plugins.svgmin({
+      plugins: [{
+        removeViewBox: false,
+      }]
+    }))
+    .pipe(gulp.dest(webDir + 'src/svg/__optimize/'));
+});
+
+gulp.task('svg-icons', function () {
+  return gulp.src(webDir + 'src/svg/__optimize/**/*.svg')
+    .pipe(plugins.svgSprites({
+      mode: "symbols",
+      selector: "i-%f",
+    }))
+    .pipe(gulp.dest(webDir + "dist/assets/icons/"));
+});
+
+gulp.task('svg-inject', function () {
+  return gulp.src(webDir + 'index.html')
+    .pipe(plugins.injectSvg())
+    .pipe(gulp.dest(webDir));
+});
+
+gulp.task('svg', function () {
+  runSequence('svg-optimize', 'svg-icons', 'svg-inject');
+});
+
 // ############## BrowserSync
 
-gulp.task('browsersync', ['sass', 'js-watch'], function () {
+gulp.task('browsersync', ['sass', 'js-watch', 'svg'], function () {
   browserSync.init({
     proxy: "front:8080",
     notify: true,
@@ -77,12 +112,13 @@ gulp.task('browsersync', ['sass', 'js-watch'], function () {
 gulp.task('watch', function() {
   gulp.watch(jsFiles, ['js']);
   gulp.watch(cssFiles, ['sass']);
+  gulp.watch(svgFiles, ['svg']);
 });
 
 // ############## Compile
 
 gulp.task('compile', function(){
-  runSequence('sass', 'js');
+  runSequence('svg', 'sass', 'js');
 });
 
 // ############## Default

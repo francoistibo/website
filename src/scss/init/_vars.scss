@@ -7,7 +7,14 @@ $orange : #eb8b2f;
 $yellow : #ffee80;
 $blue : #9effff;
 
+$color-primary: $orange;
+
 // BREAKPOINTS
 $phablet: 480px;
 $laptop: 992px;
 $desktop: 1200px;
+$big-desktop: 1440px;
+
+// EASE
+$easingEffectNormal: cubic-bezier(.86, 0, .07, 1);
+$easingEffectSwift: cubic-bezier(0, 0, .2, .92);
