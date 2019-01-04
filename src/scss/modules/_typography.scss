@@ -45,19 +45,39 @@ blockquote {
 }
 
 a {
-  color: #000;
+  position: relative;
+  color: currentColor;
   text-decoration: none;
-  border-bottom: 1px solid #000;
   transition: all .2s $easingEffectSwift;
+
+  &::after {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    bottom: -2px;
+    height: .25rem;
+    width: 100%;
+    background: linear-gradient(to right, $color-primary, $color-third);
+    display: inline-block;
+    content: "";
+    transition: all .2s .2s $easingEffectSwift;
+  }
+
+  &:hover {
+    &::after {
+      height: 1.1rem;
+    }
+  }
 }
 
 ul.social {
   padding: .5rem 1rem;
-  margin: 0 -1rem;
+  margin: 0 -.7rem;
+  display: inline-block;
 
   li {
     list-style-type: none;
-    margin: 0 1rem;
+    margin: 0 .7rem .5rem;
     height: 65px;
     display: inline-block;
 
@@ -65,56 +85,29 @@ ul.social {
       position: relative;
       display: block;
       width: 100%;
+      height: 55px;
       text-decoration: none;
       border-bottom: 0;
+      transition: all .2s ease;
 
       .icon {
         width: 30px;
         height: 30px;
+        transition: all .2s ease;
       }
 
       span {
         position: absolute;
         left: 50%;
-        bottom: -25px;
+        bottom: 0;
         display: inline-block;
         font-size: .7rem;
         text-transform: uppercase;
         transform: translate3d(-50%, 0, 0);
       }
 
-      &:hover {
-        .icon {
-          transform: translate3d(0, -5px, 0);
-
-          &.icon-twitter {
-            stroke: #00acee;
-          }
-
-          &.icon-linkedin {
-            stroke: #0077b5;
-          }
-
-          &.icon-github {
-            stroke: #0366d6;
-          }
-
-          &.icon-codepen {
-            stroke: #ffdd40;
-          }
-
-          &.icon-dropmark {
-            stroke: #38dedf;
-          }
-
-          &.icon-resume {
-            stroke: #d60352;
-          }
-
-          &.icon-contact {
-            stroke: $color-primary;
-          }
-        }
+      &::after {
+        display: none;
       }
     }
   }
@@ -138,7 +131,11 @@ ul.social {
 
   ul.social {
     li {
+      margin-bottom: 0;
+
       a {
+        height: 60px;
+
         .icon {
           width: 40px;
           height: 40px;
@@ -179,5 +176,13 @@ ul.social {
   .h2-like,
   blockquote span {
     font-size: 1.8rem;
+  }
+
+  ul.social {
+    margin: 0 -1.1rem;
+
+    li {
+      margin: 0 1.1rem;
+    }
   }
 }

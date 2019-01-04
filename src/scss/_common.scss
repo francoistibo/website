@@ -21,11 +21,12 @@ html {
 
 *::selection,
 *::-moz-selection {
-  background: #9effff;
+  background: $color-secondary;
   color: #000;
 }
 
 body {
+  position: relative;
   width: 100%;
   min-height: 100%;
   background: #fff;

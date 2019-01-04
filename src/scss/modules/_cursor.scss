@@ -1,10 +1,10 @@
 #cursor {
   position: absolute;
-  z-index: 30;
+  z-index: 1;
   top: 50%;
   left: 50%;
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   margin: 0;
   pointer-events: none;
   opacity: 0;
@@ -15,25 +15,37 @@
     display: inline-block;
     width: 100%;
     height: 100%;
-    background: currentColor;
+    background: #f4f4f4;
     border-radius: 50%;
     transform: translate3d(-50%, -50%, 0);
-    transition: all .2s .2s $easingEffectSwift;
+    transform-origin: 50% 50%;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    backface-visibility: hidden;
+    transition: all .2s $easingEffectSwift;
   }
-
-  // &.cursor-dark {
-  //   .cursor-inner {
-  //     background: #000;
-  //   }
-  // }
 
   &.cursor-link-hover {
     .cursor-inner {
-      opacity: 0;
+      width: 90px;
+      height: 90px;
+      background: linear-gradient(to right, $color-primary, $color-third);
+      animation: radiustransform 10s infinite linear;
     }
   }
 
   html:hover & {
     opacity: 1;
   }
+}
+
+@keyframes radiustransform {
+  0%,
+  100% { border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%; }
+  14% { border-radius: 40% 60% 54% 46% / 49% 60% 40% 51%; }
+  28% { border-radius: 54% 46% 38% 62% / 49% 70% 30% 51%; }
+  42% { border-radius: 61% 39% 55% 45% / 61% 38% 62% 39%; }
+  56% { border-radius: 61% 39% 67% 33% / 70% 50% 50% 30%; }
+  70% { border-radius: 50% 50% 34% 66% / 56% 68% 32% 44%; }
+  84% { border-radius: 46% 54% 50% 50% / 35% 61% 39% 65%; }
 }

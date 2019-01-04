@@ -1,16 +1,15 @@
 // COLORS
+$yellow : adjust-hue(hsl(62, 100%, 90%), 30%);
+$red : adjust-hue(hsl(20, 100%, 85%), 30%);
+$green : adjust-hue(hsl(97, 100%, 90%), 30%);
 
-$violet : #2d2b55;
-$violetdark : #1d1d3d;
-$green : #a5ff90;
-$orange : #eb8b2f;
-$yellow : #ffee80;
-$blue : #9effff;
-
-$color-primary: $orange;
+$color-primary : $yellow;
+$color-secondary : $red;
+$color-third : $green;
 
 // BREAKPOINTS
 $phablet: 480px;
+$tablet: 768px;
 $laptop: 992px;
 $desktop: 1200px;
 $big-desktop: 1440px;

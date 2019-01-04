@@ -9,6 +9,8 @@
 
   // DEVICE : LAPTOP
   @media screen and (min-width: $laptop) {
+    position: relative;
+    z-index: 3;
     display: flex;
     justify-content: flex-start;
     align-items: center;

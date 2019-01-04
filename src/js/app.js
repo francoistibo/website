@@ -5,7 +5,8 @@ var x, y, dx, dy, mouseFollowKey, mouseX, mouseY, xPos, yPos = 0;
 
 // SELECTOR VARS
 var cursor = document.getElementById("cursor");
-var basicLink = document.querySelectorAll("a:not(.active), button");
+var link = document.querySelectorAll("ul.social");
+// console.log(basicLink);
 
 // FPS VARS
 var fps = 40;
@@ -55,13 +56,15 @@ function followMouse() {
 function cursorBehavior() {
   followMouse();
 
-  basicLink.addEventListener("mouseover", function() {
-    cursor.classList.add("cursor-link-hover");
+  for (var i = 0 ; i < link.length ; i++) {
+    link[i].addEventListener("mouseover", function(){
+      cursor.classList.add("cursor-link-hover");
+    }, false);
 
-    setTimeout(function() {
-      cursor.classList.remove("cursor-link-hover");
-    }, 500);
-  }, false);
+    link[i].addEventListener("mouseleave", function(){
+      document.querySelector(".cursor-link-hover").classList.remove("cursor-link-hover");
+    }, false);
+  }
 }
 
 // FUNCTION : INIT

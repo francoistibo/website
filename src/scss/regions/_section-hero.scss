@@ -27,6 +27,23 @@
     padding: 0 1rem 2rem;
   }
 
+  // DEVICE : TABLET
+
+  @media screen and (min-width: $tablet) {
+    .portrait {
+      display: block;
+      width: 28rem;
+      height: 28rem;
+      border-radius: 0;
+      margin: 3rem auto 2rem;
+
+      img {
+        border-radius: 4px;
+        box-shadow: 0 2px 4px 0 rgba(71, 45, 45, .1);
+      }
+    }
+  }
+
   // DEVICE : LAPTOP
 
   @media screen and (min-width: $laptop) {
@@ -47,23 +64,12 @@
       img {
         position: relative;
         margin: 0;
-        border-radius: 4px;
-        box-shadow: 0 2px 4px 0 rgba(71, 45, 45, .1);
+        border: 10px solid #fff;
 
-        &::after {
-          position: absolute;
-          left: 0;
-          top: 0;
-          content: "";
-          z-index: 2;
-          display: block;
-          width: 100%;
-          height: 100%;
-          border: 20px solid red;
-        }
-
-        &:hover::after {
-          opacity: 1;
+        &:hover {
+          &::after {
+            opacity: 1;
+          }
         }
       }
     }
