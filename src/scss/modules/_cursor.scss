@@ -3,19 +3,20 @@
   z-index: 1;
   top: 50%;
   left: 50%;
-  width: 12px;
-  height: 12px;
+  width: 24px;
+  height: 24px;
   margin: 0;
   pointer-events: none;
   opacity: 0;
   transition: all .2s $easingEffectSwift;
+  will-change: transform, opacity;
 
   .cursor-inner {
     position: relative;
     display: inline-block;
     width: 100%;
     height: 100%;
-    background: #f4f4f4;
+    border: 4px solid #eee;
     border-radius: 50%;
     transform: translate3d(-50%, -50%, 0);
     transform-origin: 50% 50%;
@@ -29,6 +30,7 @@
     .cursor-inner {
       width: 90px;
       height: 90px;
+      border: 0;
       background: linear-gradient(to right, $color-primary, $color-third);
       animation: radiustransform 10s infinite linear;
     }

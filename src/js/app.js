@@ -6,10 +6,9 @@ var x, y, dx, dy, mouseFollowKey, mouseX, mouseY, xPos, yPos = 0;
 // SELECTOR VARS
 var cursor = document.getElementById("cursor");
 var link = document.querySelectorAll("ul.social");
-// console.log(basicLink);
 
 // FPS VARS
-var fps = 40;
+var fps = 30;
 var now;
 var then = Date.now();
 var interval = 1000/fps;
@@ -33,8 +32,8 @@ function followMouse() {
       x = mouseX;
       y = mouseY;
     } else {
-      dx = (mouseX - x) * 0.1;
-      dy = (mouseY - y) * 0.1;
+      dx = (mouseX - x) * 0.22;
+      dy = (mouseY - y) * 0.22;
 
       if (Math.abs(dx) + Math.abs(dy) < .1) {
         x = mouseX;

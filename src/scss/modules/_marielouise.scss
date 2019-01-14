@@ -1,10 +1,7 @@
-$border: 15px;
-
 .marielouise {
   display: none;
 
   @media screen and (min-width: $laptop) {
-
     position: fixed;
     z-index: 1;
     width: 100%;
@@ -25,8 +22,14 @@ $border: 15px;
 
     &::after {
       z-index: 2;
-      margin: $border;
+      margin: 15px;
       background: #fff;
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    &::after {
+      margin: 20px;
     }
   }
 }
