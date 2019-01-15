@@ -2,7 +2,7 @@
   position: relative;
   z-index: 2;
   text-align: center;
-  padding: 110px 20px 20px;
+  padding: 0 20px 20px;
 
   p {
     font-weight: 400;
@@ -10,12 +10,8 @@
     color: #ccc;
   }
 
-  span.heart {
+  span.icon {
     font-size: 1.3em;
-  }
-
-  @media screen and (min-width: $phablet) {
-    padding-top: 170px;
   }
 
   @media screen and (min-width: $tablet) {

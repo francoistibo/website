@@ -80,7 +80,7 @@ gulp.task('svg-icons', function () {
       mode: "symbols",
       selector: "i-%f",
     }))
-    .pipe(gulp.dest(webDir + "dist/assets/icons/"));
+    .pipe(gulp.dest(webDir + "assets/icons/"));
 });
 
 gulp.task('svg-inject', function () {

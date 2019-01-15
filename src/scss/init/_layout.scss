@@ -1,6 +1,9 @@
 .section {
   display: block;
-  height: 100%;
+
+  @media screen and (min-width: $laptop) {
+    height: 100%;
+  }
 }
 
 .section-inner {
