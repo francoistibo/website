@@ -7,7 +7,7 @@ h1 {
 }
 
 h2,
-.h2-like {
+p {
   font-size: 1.4rem;
   font-weight: 300;
   line-height: 1.3;
@@ -45,9 +45,13 @@ blockquote {
   }
 }
 
-p.hashtags {
-  font-weight: 400;
-  margin: 1rem 1rem 1.5rem;
+p {
+  font-weight: 300;
+
+  &.hashtags {
+    font-weight: 400;
+    margin: 1rem 1rem 1.5rem;
+  }
 }
 
 a {
@@ -126,12 +130,7 @@ ul.social {
     font-size: 2.4rem;
   }
 
-  h2,
-  .h2-like {
-    font-size: 1.7rem;
-  }
-
-  blockquote {
+  h2 {
     font-size: 1.7rem;
   }
 
@@ -178,9 +177,7 @@ ul.social {
     font-size: 3.5rem;
   }
 
-  h2,
-  .h2-like,
-  blockquote span {
+  h2 {
     font-size: 1.8rem;
   }
 
