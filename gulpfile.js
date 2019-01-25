@@ -5,9 +5,6 @@ var gulpLoadPlugins = require('gulp-load-plugins');
 var plugins = gulpLoadPlugins({camelize: true});
 
 var runSequence = require('run-sequence');
-var browserSync = require('browser-sync');
-
-var env = process.env.APP_ENVIRONMENT;
 
 // ############## Configuration
 
@@ -42,7 +39,6 @@ gulp.task('sass', function() {
     })) // Add suffix .min
     .pipe(plugins.sourcemaps.write('maps/'))
     .pipe(gulp.dest(webDir + 'dist/')) // Save app.min.css in dist directory
-    .pipe(browserSync.stream());
 });
 
 // ############## JS : traitement des scripts
@@ -58,7 +54,6 @@ gulp.task('js', function() {
 });
 
 gulp.task('js-watch', ['js'], function (done) {
-  browserSync.reload();
   done();
 });
 
@@ -91,20 +86,6 @@ gulp.task('svg-inject', function () {
 
 gulp.task('svg', function () {
   runSequence('svg-optimize', 'svg-icons', 'svg-inject');
-});
-
-// ############## BrowserSync
-
-gulp.task('browsersync', ['sass', 'js-watch', 'svg'], function () {
-  browserSync.init({
-    proxy: "front:8080",
-    notify: true,
-    ghostMode: false,
-    open: false
-  });
-
-  gulp.watch(cssFiles, ['sass']);
-  gulp.watch(jsFiles, ['js-watch']);
 });
 
 // ############## Watch
