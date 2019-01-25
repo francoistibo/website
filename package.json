@@ -8,8 +8,6 @@
     "vanilla-tilt": "^1.5.0"
   },
   "devDependencies": {
-    "browser-sync": "^2.26.0",
-    "dotenv-parse-variables": "^0.2.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-clean": "^0.4.0",
