@@ -1,61 +1,63 @@
-h1 {
-  font-size: 1.8rem;
-  font-weight: 900;
-  line-height: 1.3;
-  margin: 1rem;
-  font-family: "Merriweather", Georgia, "Times New Roman", Times, serif;
-}
+.title {
+  &--level-1 {
+    font-size: 1.8rem;
+    font-weight: 900;
+    line-height: 1.3;
+    margin: 1rem;
+    font-family: "Merriweather", Georgia, "Times New Roman", Times, serif;
+  }
 
-h2,
-p {
-  font-size: 1.4rem;
-  font-weight: 300;
-  line-height: 1.3;
-  margin: 1rem 1rem .8rem 1rem;
-}
+  &--level-2 {
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.3;
+    margin: 1rem 1rem .8rem 1rem;
+    font-weight: 600;
 
-h2 {
-  font-weight: 600;
+    span {
+      display: block;
+    }
+  }
 
-  span {
-    display: block;
+  &--level-3 {
+    text-transform: uppercase;
+    font-size: .7rem;
+    font-weight: 300;
+    color: #666;
+    margin: 1.2rem 1rem .5rem;
   }
 }
 
-h3 {
-  text-transform: uppercase;
-  font-size: .7rem;
-  font-weight: 300;
-  color: #666;
-  margin: 1.2rem 1rem .5rem;
-}
-
-blockquote {
+.blockquote {
   display: block;
   font-size: 1.4rem;
   font-weight: 600;
   margin: 1rem;
 
-  span {
+  &__block {
     display: block;
 
-    &.dash {
+    &--dash {
       display: none;
     }
   }
 }
 
-p {
+.paragraph {
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1.3;
+  margin: 1rem 1rem .8rem 1rem;
   font-weight: 300;
 
-  &.hashtags {
+  &--hashtags {
     font-weight: 400;
     font-size: 1.1rem;
     margin: 1rem 1rem 1.5rem;
   }
 }
 
-a {
+.link {
   position: relative;
   color: currentColor;
   text-decoration: none;
@@ -81,74 +83,78 @@ a {
   }
 }
 
-ul.social {
+.social-list {
   padding: .5rem 1rem;
   margin: 0 -.7rem;
   display: inline-block;
 
-  li {
+  &__item {
     list-style-type: none;
     margin: 0 .7rem .5rem;
     height: 65px;
     display: inline-block;
 
-    a {
-      position: relative;
-      display: block;
-      width: 100%;
-      height: 55px;
-      text-decoration: none;
-      border-bottom: 0;
-      transition: all .2s ease;
+  }
 
-      .icon {
-        width: 30px;
-        height: 30px;
-        transition: all .2s ease;
-      }
+  &__item-link {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 55px;
+    text-decoration: none;
+    border-bottom: 0;
+    transition: all .2s ease;
 
-      span {
-        position: absolute;
-        left: 50%;
-        bottom: 0;
-        width: 60px;
-        text-align: center;
-        display: inline-block;
-        font-size: .7rem;
-        text-transform: uppercase;
-        transform: translate3d(-50%, 0, 0);
-      }
 
-      &::after {
-        display: none;
-      }
+    &::after {
+      display: none;
     }
+  }
+
+  &__item-icon {
+    width: 30px;
+    height: 30px;
+    transition: all .2s ease;
+  }
+
+  &__item-label {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 60px;
+    text-align: center;
+    display: inline-block;
+    font-size: .7rem;
+    text-transform: uppercase;
+    transform: translate3d(-50%, 0, 0);
   }
 }
 
 // DEVICE : PHABLET
 
 @media screen and (min-width: $phablet) {
-  h1 {
-    font-size: 2.4rem;
+  .title {
+    &--level-1 {
+      font-size: 2.4rem;
+    }
+
+    &--level-2 {
+      font-size: 1.7rem;
+    }
   }
 
-  h2 {
-    font-size: 1.7rem;
-  }
-
-  ul.social {
-    li {
+  .social-list {
+    &__item {
       margin-bottom: 0;
+    }
 
-      a {
-        height: 60px;
+    &__item-link {
+      height: 60px;
+    }
 
-        .icon {
-          width: 40px;
-          height: 40px;
-        }
-      }
+    &__item-icon {
+      width: 40px;
+      height: 40px;
     }
   }
 }
@@ -156,38 +162,40 @@ ul.social {
 // DEVICE : LAPTOP
 
 @media screen and (min-width: $laptop) {
-  blockquote {
+  .blockquote {
     position: relative;
-  }
 
-  blockquote span {
-    display: block;
-    padding-left: 2.2rem;
-  }
+    &__block {
+      display: block;
+      padding-left: 2.2rem;
 
-  blockquote span.dash {
-    position: absolute;
-    left: -2.2rem;
-    top: 0;
-    display: inline-block;
+      &--dash {
+        position: absolute;
+        left: -2.2rem;
+        top: 0;
+        display: inline-block;
+      }
+    }
   }
 }
 
 // DEVICE : DESKTOP
 
 @media screen and (min-width: $desktop) {
-  h1 {
-    font-size: 3.5rem;
+  .title {
+    &--level-1 {
+      font-size: 3.5rem;
+    }
+
+    &--level-2 {
+      font-size: 1.8rem;
+    }
   }
 
-  h2 {
-    font-size: 1.8rem;
-  }
-
-  ul.social {
+  .social-list {
     margin: 0 -1.1rem;
 
-    li {
+    &__item {
       margin: 0 1.1rem;
     }
   }

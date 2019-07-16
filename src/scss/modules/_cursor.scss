@@ -1,4 +1,4 @@
-#cursor {
+.cursor {
   position: absolute;
   z-index: 1;
   top: 50%;
@@ -11,7 +11,7 @@
   transition: all .2s $easingEffectSwift;
   will-change: transform, opacity;
 
-  .cursor-inner {
+  &__inner {
     position: relative;
     display: inline-block;
     width: 100%;
@@ -26,8 +26,8 @@
     transition: all .2s $easingEffectSwift;
   }
 
-  &.cursor-link-hover {
-    .cursor-inner {
+  &--link-hover {
+    .cursor__inner {
       width: 90px;
       height: 90px;
       border: 0;

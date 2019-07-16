@@ -4,8 +4,8 @@
 var x, y, dx, dy, mouseFollowKey, mouseX, mouseY, xPos, yPos = 0;
 
 // SELECTOR VARS
-var cursor = document.getElementById("cursor");
-var link = document.querySelectorAll("ul.social");
+var cursor = document.querySelector(".cursor");
+var link = document.querySelectorAll("ul.social-list");
 
 // FPS VARS
 var fps = 30;
@@ -57,11 +57,11 @@ function cursorBehavior() {
 
   for (var i = 0 ; i < link.length ; i++) {
     link[i].addEventListener("mouseover", function(){
-      cursor.classList.add("cursor-link-hover");
+      cursor.classList.add("cursor--link-hover");
     }, false);
 
     link[i].addEventListener("mouseleave", function(){
-      document.querySelector(".cursor-link-hover").classList.remove("cursor-link-hover");
+      cursor.classList.remove("cursor--link-hover");
     }, false);
   }
 }

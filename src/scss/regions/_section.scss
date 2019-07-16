@@ -1,0 +1,125 @@
+.section {
+  display: block;
+
+  &__inner {
+    position: relative;
+    text-align: center;
+
+    @media screen and (min-width: $laptop) {
+      position: relative;
+      z-index: 3;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin: 0 3rem;
+      height: 100%;
+    }
+  }
+
+  &--hero {
+    &__picture {
+      display: block;
+      margin: 2rem auto 1rem;
+      width: 12rem;
+      height: 12rem;
+      border-radius: 50%;
+      z-index: 1;
+      overflow: hidden;
+      box-shadow: 0 2px 4px 0 rgba(71, 45, 45, .1);
+
+      img {
+        width: 100%;
+        height: auto;
+        will-change: transform;
+        backface-visibility: hidden;
+      }
+    }
+
+    &__text {
+      position: relative;
+      z-index: 2;
+      display: inline-block;
+      background-color: #fff;
+      margin: 0 auto;
+      max-width: 450px;
+      padding: 0 1rem 2rem;
+    }
+
+    // DEVICE : TABLET
+
+    @media screen and (min-width: $tablet) {
+      &__picture {
+        display: block;
+        width: 28rem;
+        height: 28rem;
+        border-radius: 0;
+        margin: 3rem auto 2rem;
+
+        img {
+          border-radius: 4px;
+          box-shadow: 0 2px 4px 0 rgba(71, 45, 45, .1);
+        }
+      }
+    }
+
+    // DEVICE : LAPTOP
+
+    @media screen and (min-width: $laptop) {
+      &__picture {
+        position: absolute;
+        z-index: 1;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        margin: 0;
+        width: 100%;
+        height: auto;
+        max-width: 50%;
+        border-radius: inherit;
+        overflow: visible;
+        box-shadow: none;
+        padding-right: 20px;
+
+        img {
+          position: relative;
+          margin: 0;
+          border: 10px solid #fff;
+
+          &:hover {
+            &::after {
+              opacity: 1;
+            }
+          }
+        }
+      }
+
+      &__text {
+        position: relative;
+        text-align: left;
+        z-index: 2;
+        width: 50%;
+        padding: 0 2rem 0 0;
+        max-width: inherit;
+        background-color: transparent;
+        margin: 0 0 1rem 0;
+      }
+    }
+
+    // DEVICE : DESKTOP
+
+    @media screen and (min-width: $desktop) {
+      &__picture {
+        max-width: 550px;
+      }
+
+      &__text {
+        width: 52%;
+      }
+    }
+  }
+
+  @media screen and (min-width: $laptop) {
+    height: 100%;
+  }
+}
+

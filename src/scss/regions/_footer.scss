@@ -4,13 +4,13 @@
   text-align: center;
   padding: 0 20px 20px;
 
-  p {
+  &__text {
     font-weight: 400;
     font-size: .8rem;
     color: #ccc;
   }
 
-  span.icon {
+  &__icon {
     font-size: 1.3em;
   }
 
