@@ -32,8 +32,8 @@ function followMouse() {
       x = mouseX;
       y = mouseY;
     } else {
-      dx = (mouseX - x) * 0.22;
-      dy = (mouseY - y) * 0.22;
+      dx = (mouseX - x) * 0.25;
+      dy = (mouseY - y) * 0.25;
 
       if (Math.abs(dx) + Math.abs(dy) < .1) {
         x = mouseX;
@@ -44,8 +44,7 @@ function followMouse() {
       }
     }
 
-    cursor.style.left = x + "px";
-    cursor.style.top = y + "px";
+    cursor.style.transform = "translate3d(" + x + "px, " + y + "px, 0)";
   }
 
   requestAnimationFrame(followMouse);
