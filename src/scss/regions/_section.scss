@@ -109,11 +109,17 @@
 
     @media screen and (min-width: $desktop) {
       &__picture {
-        max-width: 550px;
+        max-width: 500px;
       }
 
       &__text {
         width: 52%;
+      }
+    }
+
+    @media screen and (min-width: $maxi-desktop) {
+      &__picture {
+        max-width: 550px;
       }
     }
   }
@@ -122,4 +128,3 @@
     height: 100%;
   }
 }
-
