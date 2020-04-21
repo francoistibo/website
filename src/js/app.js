@@ -32,8 +32,8 @@ function followMouse() {
       x = mouseX;
       y = mouseY;
     } else {
-      dx = (mouseX - x) * 0.25;
-      dy = (mouseY - y) * 0.25;
+      dx = (mouseX - x) * 0.5;
+      dy = (mouseY - y) * 0.5;
 
       if (Math.abs(dx) + Math.abs(dy) < .1) {
         x = mouseX;

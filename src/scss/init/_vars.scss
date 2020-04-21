@@ -1,11 +1,12 @@
 // COLORS
-$yellow : adjust-hue(hsl(62, 100%, 90%), 30%);
-$red : adjust-hue(hsl(20, 100%, 85%), 30%);
-$green : adjust-hue(hsl(97, 100%, 90%), 30%);
+$purple-light : #2f2966;
+$purple : #1e1e3f;
+$red: #d92c5b;
+$pink: #d93176;
 
-$color-primary : $yellow;
-$color-secondary : $red;
-$color-third : $green;
+$color-primary : $purple-light;
+$color-secondary : $purple;
+$color-fourth : $red;
 
 // BREAKPOINTS
 $phablet: 480px;

@@ -7,7 +7,7 @@
   &__text {
     font-weight: 400;
     font-size: .8rem;
-    color: #ccc;
+    color: #fff;
   }
 
   &__icon {
@@ -31,6 +31,6 @@
 
   @media screen and (min-width: $desktop) {
     right: -20px;
-    bottom: 85px;
+    bottom: 95px;
   }
 }

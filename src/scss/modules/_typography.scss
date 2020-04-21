@@ -4,12 +4,12 @@
     font-weight: 900;
     line-height: 1.3;
     margin: 1rem;
+    color: $color-fourth;
     font-family: "Merriweather", Georgia, "Times New Roman", Times, serif;
   }
 
   &--level-2 {
     font-size: 1.4rem;
-    font-weight: 300;
     line-height: 1.3;
     margin: 1rem 1rem .8rem 1rem;
     font-weight: 600;
@@ -22,9 +22,16 @@
   &--level-3 {
     text-transform: uppercase;
     font-size: .7rem;
-    font-weight: 300;
-    color: #666;
-    margin: 1.2rem 1rem .5rem;
+    font-weight: 600;
+    background-color: $color-fourth;
+    display: inline-block;
+    padding: .15rem .3rem;
+    margin: 0 1rem;
+    transform: rotate(-2deg);
+
+    &:first-of-type {
+      margin-top: 1rem;
+    }
   }
 }
 
@@ -45,7 +52,6 @@
 
 .paragraph {
   font-size: 1.4rem;
-  font-weight: 300;
   line-height: 1.3;
   margin: 1rem 1rem .8rem 1rem;
   font-weight: 300;
@@ -70,7 +76,7 @@
     bottom: -2px;
     height: .25rem;
     width: calc(100% + 4px);
-    background: linear-gradient(to right, $color-primary, $color-third);
+    background: $color-fourth;
     display: inline-block;
     content: "";
     transition: all .2s .2s $easingEffectSwift;
@@ -84,7 +90,7 @@
 }
 
 .social-list {
-  padding: .5rem 1rem;
+  padding: 1rem 1rem .5rem;
   margin: 0 -.7rem;
   display: inline-block;
 
@@ -93,7 +99,6 @@
     margin: 0 .7rem .5rem;
     height: 65px;
     display: inline-block;
-
   }
 
   &__item-link {
@@ -103,8 +108,7 @@
     height: 55px;
     text-decoration: none;
     border-bottom: 0;
-    transition: all .2s ease;
-
+    transition: all .1s ease;
 
     &::after {
       display: none;
@@ -114,7 +118,7 @@
   &__item-icon {
     width: 30px;
     height: 30px;
-    transition: all .2s ease;
+    transition: all .1s ease;
   }
 
   &__item-label {
