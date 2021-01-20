@@ -4,7 +4,7 @@
   "repository": "ssh://git@github.com:francoistibo/website.git",
   "author": "François THIBAUD <francois.thibaud@gmail.com>",
   "dependencies": {
-    "gsap": "^2.0.2",
+    "gsap": "^3.6.0",
     "vanilla-tilt": "^1.5.0"
   },
   "devDependencies": {
