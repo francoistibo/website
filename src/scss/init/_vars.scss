@@ -1,12 +1,7 @@
 // COLORS
-$purple-light : #2f2966;
-$purple : #1e1e3f;
-$red: #d92c5b;
-$pink: #d93176;
-
-$color-primary : $purple-light;
-$color-secondary : $purple;
-$color-fourth : $red;
+$color-primary : #67dda5;
+$color-secondary : darken($color-primary, 5%);
+$color-fourth : #20515c;
 
 // BREAKPOINTS
 $phablet: 480px;
