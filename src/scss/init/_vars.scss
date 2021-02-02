@@ -1,7 +1,6 @@
 // COLORS
-$color-secondary : #00203F;
-$color-primary : lighten($color-secondary, 3%);
-$color-fourth : #ADEFD1;
+$color-primary : lighten( #00203F, 3%);
+$color-secondary : #ADEFD1;
 
 // BREAKPOINTS
 $phablet: 480px;

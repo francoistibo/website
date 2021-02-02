@@ -17,13 +17,13 @@
       left: 0;
       z-index: 1;
       content: "";
-      background: darken($color-secondary, 7%);
+      background: darken($color-primary, 7%);
     }
 
     &::after {
       z-index: 2;
       margin: 15px;
-      background: $color-secondary;
+      background: $color-primary;
     }
   }
 
